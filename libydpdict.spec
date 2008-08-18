@@ -3,11 +3,14 @@ Summary(pl.UTF-8):	Interfejs do słowników YDP
 Name:		libydpdict
 Version:	1.0.0
 Release:	1
-License:	LGPL 2.1
+License:	LGPL v2.1
 Group:		Libraries
 Source0:	http://toxygen.net/ydpdict/%{name}-%{version}.tar.gz
 # Source0-md5:	e6d5989d74c275e23fad0e2a5cc997fe
 URL:		http://toxygen.net/ydpdict/
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -21,11 +24,11 @@ YDP and a program which can use this library (e.g. ydpdict).
 
 %description -l pl.UTF-8
 Biblioteka ta pozwala na łatwy dostęp do słowników rozpowszechnianych
-przez Young Digital Planet (angielski-polski/polsko-angielski i/lub
+przez Young Digital Planet (angielsko-polski/polsko-angielski i/lub
 niemiecko-polski/polsko-niemiecki).
 
-Pakiet ten zawiera tylko biobloteką, bez plików słownika. Aby
-skorzystać z danych, potrzebujesz kopie plików słowników z YDP oraz
+Pakiet ten zawiera tylko bioblotekę, bez plików słownika. Aby
+skorzystać z danych, potrzebne są kopie plików słowników z YDP oraz
 program korzystający z tej biblioteki (n.p. ydpdict).
 
 %package devel
@@ -79,15 +82,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libydpdict.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libydpdict.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libydpdict.so
+%{_libdir}/libydpdict.la
 %{_includedir}/ydpdict
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libydpdict.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libydpdict.a
