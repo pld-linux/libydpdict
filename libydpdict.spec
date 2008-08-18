@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Interfejs do słowników YDP
 Name:		libydpdict
 Version:	1.0.0
 Release:	1
-License:	GPL
+License:	LGPL 2.1
 Group:		Libraries
 Source0:	http://toxygen.net/ydpdict/%{name}-%{version}.tar.gz
 # Source0-md5:	e6d5989d74c275e23fad0e2a5cc997fe
