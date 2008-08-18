@@ -27,7 +27,7 @@ Biblioteka ta pozwala na łatwy dostęp do słowników rozpowszechnianych
 przez Young Digital Planet (angielsko-polski/polsko-angielski i/lub
 niemiecko-polski/polsko-niemiecki).
 
-Pakiet ten zawiera tylko bioblotekę, bez plików słownika. Aby
+Pakiet ten zawiera tylko bibliotekę, bez plików słownika. Aby
 skorzystać z danych, potrzebne są kopie plików słowników z YDP oraz
 program korzystający z tej biblioteki (n.p. ydpdict).
 
